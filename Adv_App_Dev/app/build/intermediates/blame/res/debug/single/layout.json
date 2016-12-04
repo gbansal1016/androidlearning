@@ -36,16 +36,16 @@
         "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.2\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.2\\res\\layout\\abc_search_view.xml"
+        "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_forecast_today.xml",
+        "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\src\\main\\res\\layout\\list_item_forecast_today.xml"
     },
     {
         "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.2\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_forecast_today.xml",
-        "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\src\\main\\res\\layout\\list_item_forecast_today.xml"
+        "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.2\\res\\layout\\abc_search_view.xml"
     },
     {
         "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",

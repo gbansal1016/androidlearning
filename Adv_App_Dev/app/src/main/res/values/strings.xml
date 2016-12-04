@@ -73,6 +73,7 @@
     <!-- Value in SharedPreferences for imperial temperature unit option [CHAR LIMIT=NONE] -->
     <string name="pref_units_imperial" translatable="false">imperial</string>
 
+    <string name="pref_location_status_key" translatable="false">loc-status</string>
 
     <!-- Language-specific constants -->
     <string name="today">Today</string>
@@ -109,5 +110,13 @@
     <!-- Strings related to Notification preference -->
     <string name="pref_last_notification">last_notification</string>
 
-    <string name="empty_forecast_list">Now Weather Information Available</string>
+    <string name="empty_forecast_list">No Weather Information Available</string>
+
+    <string name="forecast_list_no_network">No Weather Information Available.The network is not available to fetch the weather data.</string>
+
+    <string name="empty_forecast_list_server_down">No Weather Information Available. The server is not returning data. Please try after some time.</string>
+
+    <string name="empty_forecast_list_server_error">No Weather Information Available. The server is not returning valid data. Please check for an updated version of sunshine.</string>
+
+    <string name="forecast_list_invalid_location">No Weather Information Available. Location is not recognized by the weather server.</string>
 </resources>

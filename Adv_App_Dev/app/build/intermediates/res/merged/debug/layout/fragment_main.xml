@@ -24,4 +24,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@null" />
+
+    <TextView
+        android:id="@+id/listview_forecast_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/empty_forecast_list"
+        android:gravity="center_horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        />
+
 </FrameLayout>

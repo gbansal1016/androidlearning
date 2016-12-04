@@ -16,9 +16,12 @@
 package com.example.android.sunshine.app;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
@@ -42,7 +45,7 @@ import java.util.List;
 /**
  * Encapsulates fetching the forecast and displaying it as a {@link ListView} layout.
  */
-public class ForecastFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
+public class ForecastFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> , SharedPreferences.OnSharedPreferenceChangeListener{
     public static final String LOG_TAG = ForecastFragment.class.getSimpleName();
     private ForecastAdapter mForecastAdapter;
 
@@ -84,6 +87,13 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
     static final int COL_WEATHER_CONDITION_ID = 6;
     static final int COL_COORD_LAT = 7;
     static final int COL_COORD_LONG = 8;
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+        if(s != null && s.equals(getString(R.string.pref_location_status_key))) {
+            updateEmptyView();
+        }
+    }
 
     /**
      * A callback interface that all activities containing this fragment must
@@ -186,6 +196,20 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
         super.onActivityCreated(savedInstanceState);
     }
 
+    @Override
+    public void onResume() {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        preferences.registerOnSharedPreferenceChangeListener(this);
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        preferences.unregisterOnSharedPreferenceChangeListener(this);
+        super.onPause();
+    }
+
     // since we read the location when we create the loader, all we need to do is restart things
     void onLocationChanged( ) {
         getLoaderManager().restartLoader(FORECAST_LOADER, null, this);
@@ -253,10 +277,37 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
         mForecastAdapter.swapCursor(data);
+
         if (mPosition != ListView.INVALID_POSITION) {
             // If we don't need to restart the loader, and there's a desired position to restore
             // to, do so now.
             mListView.smoothScrollToPosition(mPosition);
+        }
+        updateEmptyView();
+    }
+
+    private void updateEmptyView() {
+        if(mForecastAdapter.getCount() == 0) {
+            TextView tv = (TextView) getView().findViewById(R.id.listview_forecast_empty);
+            if(tv !=  null) {
+                int message = R.string.empty_forecast_list;
+                if(!Utility.isNetworkAvailable(getActivity())){
+                   message = R.string.forecast_list_no_network;
+                    tv.setText(message);
+                    return;
+                }
+
+                int locationStatus = Utility.getLocationStatus(getActivity());
+                if (locationStatus == SunshineSyncAdapter.LOCATION_STATUS_SERVER_DOWN) {
+                    message = R.string.empty_forecast_list_server_down;
+                } else if (locationStatus == SunshineSyncAdapter.LOCATION_STATUS_SERVER_INVALID) {
+                    message = R.string.empty_forecast_list_server_error;
+                } else if (locationStatus == SunshineSyncAdapter.LOCATION_STATUS_INVALID) {
+                    message = R.string.forecast_list_invalid_location;
+                }
+
+                tv.setText(message);
+            }
         }
     }
 
