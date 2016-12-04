@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\xml\\authenticator.xml",
+        "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\src\\main\\res\\xml\\authenticator.xml"
+    },
+    {
+        "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\xml\\syncadapter.xml",
+        "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\src\\main\\res\\xml\\syncadapter.xml"
+    },
+    {
+        "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_general.xml",
+        "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\src\\main\\res\\xml\\pref_general.xml"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\today_touch_selector.xml",
+        "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\src\\main\\res\\drawable-v21\\today_touch_selector.xml"
+    },
+    {
+        "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\touch_selector.xml",
+        "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\src\\main\\res\\drawable-v21\\touch_selector.xml"
+    }
+]

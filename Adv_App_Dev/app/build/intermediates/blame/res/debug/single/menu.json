@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\menu\\forecastfragment.xml",
+        "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\src\\main\\res\\menu\\forecastfragment.xml"
+    },
+    {
+        "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\menu\\detail.xml",
+        "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\src\\main\\res\\menu\\detail.xml"
+    },
+    {
+        "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\res\\merged\\debug\\menu\\detailfragment.xml",
+        "source": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\src\\main\\res\\menu\\detailfragment.xml"
+    }
+]
