@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:17:1-95:12
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:17:1-96:12
 	package
 		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:18:5-47
 		INJECTED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml
@@ -34,11 +34,13 @@ ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidMan
 	android:name
 		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:31:22-76
 application
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:33:5-93:19
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:33:5-94:19
 MERGED from [com.android.support:appcompat-v7:21.0.2] C:\gaurav\android\androidlearning\Adv_App_Dev\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\AndroidManifest.xml:16:5-19
 MERGED from [com.android.support:support-v4:21.0.2] C:\gaurav\android\androidlearning\Adv_App_Dev\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\AndroidManifest.xml:16:5-19
 	android:label
 		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:36:9-41
+	android:supportsRtl
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:38:9-35
 	android:allowBackup
 		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:34:9-35
 	android:icon
@@ -46,91 +48,91 @@ MERGED from [com.android.support:support-v4:21.0.2] C:\gaurav\android\androidlea
 	android:theme
 		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:37:9-40
 activity#com.example.android.sunshine.app.MainActivity
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:38:9-47:20
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:39:9-48:20
 	android:label
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:41:13-45
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:42:13-45
 	android:theme
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:40:13-49
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:41:13-49
 	android:name
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:39:13-41
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:40:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:42:13-46:29
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:43:13-47:29
 action#android.intent.action.MAIN
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:43:17-69
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:44:17-69
 	android:name
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:43:25-66
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:44:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:45:17-77
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:46:17-77
 	android:name
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:45:27-74
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:46:27-74
 activity#com.example.android.sunshine.app.DetailActivity
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:48:9-55:20
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:49:9-56:20
 	android:label
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:50:13-58
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:51:13-58
 	android:parentActivityName
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:51:13-55
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:52:13-55
 	android:name
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:49:13-43
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:50:13-43
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:52:13-54:81
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:53:13-55:81
 	android:value
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:54:17-78
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:55:17-78
 	android:name
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:53:17-63
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:54:17-63
 activity#com.example.android.sunshine.app.SettingsActivity
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:56:9-64:20
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:57:9-65:20
 	android:label
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:58:13-60
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:59:13-60
 	android:parentActivityName
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:59:13-55
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:60:13-55
 	android:theme
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:60:13-49
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:61:13-49
 	android:name
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:57:13-45
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:58:13-45
 provider#com.example.android.sunshine.app.data.WeatherProvider
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:65:9-69:39
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:66:9-70:39
 	android:authorities
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:66:13-60
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:67:13-60
 	android:syncable
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:69:13-36
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:70:13-36
 	android:exported
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:68:13-37
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:69:13-37
 	android:name
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:67:13-49
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:68:13-49
 service#com.example.android.sunshine.app.sync.SunshineAuthenticatorService
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:72:9-79:19
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:73:9-80:19
 	android:name
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:72:18-67
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:73:18-67
 intent-filter#android.accounts.AccountAuthenticator
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:73:13-75:29
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:74:13-76:29
 action#android.accounts.AccountAuthenticator
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:74:17-80
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:75:17-80
 	android:name
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:74:25-77
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:75:25-77
 meta-data#android.accounts.AccountAuthenticator
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:76:13-78:57
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:77:13-79:57
 	android:resource
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:78:17-54
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:79:17-54
 	android:name
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:77:17-69
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:78:17-69
 service#com.example.android.sunshine.app.sync.SunshineSyncService
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:82:9-92:19
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:83:9-93:19
 	android:exported
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:84:13-36
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:85:13-36
 	android:name
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:83:13-53
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:84:13-53
 intent-filter#android.content.SyncAdapter
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:86:13-88:29
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:87:13-89:29
 action#android.content.SyncAdapter
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:87:17-70
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:88:17-70
 	android:name
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:87:25-67
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:88:25-67
 meta-data#android.content.SyncAdapter
-ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:89:13-91:55
+ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:90:13-92:55
 	android:resource
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:91:17-52
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:92:17-52
 	android:name
-		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:90:17-59
+		ADDED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml:91:17-59
 uses-sdk
 INJECTED from C:\gaurav\android\androidlearning\Adv_App_Dev\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:21.0.2] C:\gaurav\android\androidlearning\Adv_App_Dev\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\AndroidManifest.xml:15:5-42

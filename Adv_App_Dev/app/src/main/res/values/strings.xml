@@ -130,4 +130,8 @@
     <string name="a11y_high_temp">High: <xliff:g id="condition">%1$s</xliff:g></string>
     <string name="a11y_low_temp">Low: <xliff:g id="condition">%1$s</xliff:g></string>
 
+
+    <!-- Glide library integration-->
+    <string name="format_art_url" translatable="false">https://raw.githubusercontent.com/udacity/Sunshine-Version-2/sunshine_master/app/src/main/res/drawable-xxhdpi/art_<xliff:g id="description">%s</xliff:g>.png</string>
+
 </resources>

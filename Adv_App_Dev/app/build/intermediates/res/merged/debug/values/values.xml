@@ -106,6 +106,7 @@
         </attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
+    <declare-styleable name="LocationEditTextPreference"><attr format="integer" name="minLength"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction">
 
@@ -193,6 +194,10 @@
     <item name="split_action_bar" type="id"/>
     <item name="up" type="id"/>
     <integer name="abc_max_action_buttons">2</integer>
+    <string name="a11y_forecast">Forecast: <ns1:g id="condition">%1$s</ns1:g></string>
+    <string name="a11y_forecast_icon">Forecast icon: <ns1:g id="condition">%1$s</ns1:g></string>
+    <string name="a11y_high_temp">High: <ns1:g id="condition">%1$s</ns1:g></string>
+    <string name="a11y_low_temp">Low: <ns1:g id="condition">%1$s</ns1:g></string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -234,9 +239,11 @@
     <string name="pref_enable_notifications_true">Enabled</string>
     <string name="pref_last_notification">last_notification</string>
     <string name="pref_location_default" translatable="false">94043</string>
+    <string name="pref_location_error_description">Invalid Location (<ns1:g id="location_setting">%1$s</ns1:g>)"</string>
     <string name="pref_location_key" translatable="false">location</string>
     <string name="pref_location_label">Location</string>
     <string name="pref_location_status_key" translatable="false">loc-status</string>
+    <string name="pref_location_unknown_description">Validating Location... (<ns1:g id="location_setting">%1$s</ns1:g>)"</string>
     <string name="pref_units_imperial" translatable="false">imperial</string>
     <string name="pref_units_key" translatable="false">units</string>
     <string name="pref_units_label">Temperature Units</string>
