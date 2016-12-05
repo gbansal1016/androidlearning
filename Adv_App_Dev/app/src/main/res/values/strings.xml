@@ -119,4 +119,15 @@
     <string name="empty_forecast_list_server_error">No Weather Information Available. The server is not returning valid data. Please check for an updated version of sunshine.</string>
 
     <string name="forecast_list_invalid_location">No Weather Information Available. Location is not recognized by the weather server.</string>
+
+    <string name="pref_location_error_description">Invalid Location (<xliff:g id="location_setting">%1$s</xliff:g>)"</string>
+
+    <string name="pref_location_unknown_description">Validating Location... (<xliff:g id="location_setting">%1$s</xliff:g>)"</string>
+
+    <!--a11y features-->
+    <string name="a11y_forecast">Forecast: <xliff:g id="condition">%1$s</xliff:g></string>
+    <string name="a11y_forecast_icon">Forecast icon: <xliff:g id="condition">%1$s</xliff:g></string>
+    <string name="a11y_high_temp">High: <xliff:g id="condition">%1$s</xliff:g></string>
+    <string name="a11y_low_temp">Low: <xliff:g id="condition">%1$s</xliff:g></string>
+
 </resources>

@@ -229,6 +229,7 @@ public class SunshineSyncAdapter extends AbstractThreadedSyncAdapter {
                     case HttpURLConnection.HTTP_OK:
                         break;
                     case HttpURLConnection.HTTP_NOT_FOUND:
+                        Log.i(LOG_TAG,"Selected location is invalid");
                         setLocationStatus(getContext(), LOCATION_STATUS_INVALID);
                         break;
                     default:

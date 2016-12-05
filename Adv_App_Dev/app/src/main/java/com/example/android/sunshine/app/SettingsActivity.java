@@ -28,6 +28,10 @@ import android.preference.PreferenceManager;
 import com.example.android.sunshine.app.data.WeatherContract;
 import com.example.android.sunshine.app.sync.SunshineSyncAdapter;
 
+import static com.example.android.sunshine.app.sync.SunshineSyncAdapter.LOCATION_STATUS_INVALID;
+import static com.example.android.sunshine.app.sync.SunshineSyncAdapter.LOCATION_STATUS_OK;
+import static com.example.android.sunshine.app.sync.SunshineSyncAdapter.LOCATION_STATUS_SERVER_UNKNOWN;
+
 /**
  * A {@link PreferenceActivity} that presents a set of application settings.
  * <p>
@@ -95,8 +99,23 @@ public class SettingsActivity extends PreferenceActivity
             if (prefIndex >= 0) {
                 preference.setSummary(listPreference.getEntries()[prefIndex]);
             }
-        } else {
+        } else if(key.equals(R.string.pref_location_key)){
             // For other preferences, set the summary to the value's simple string representation.
+            @SunshineSyncAdapter.LocationStatus int status = Utility.getLocationStatus(this);
+            switch (status) {
+                case LOCATION_STATUS_OK:
+                    preference.setSummary(stringValue);
+                    break;
+                case LOCATION_STATUS_INVALID:
+                    preference.setSummary(getString(R.string.pref_location_error_description));
+                    break;
+                case LOCATION_STATUS_SERVER_UNKNOWN:
+                    preference.setSummary(getString(R.string.pref_location_unknown_description));
+                    break;
+                default:
+                    preference.setSummary(stringValue);
+            }
+        } else {
             preference.setSummary(stringValue);
         }
     }
@@ -104,6 +123,7 @@ public class SettingsActivity extends PreferenceActivity
     // This gets called before the preference is changed
     @Override
     public boolean onPreferenceChange(Preference preference, Object value) {
+
         setPreferenceSummary(preference, value);
         return true;
     }
