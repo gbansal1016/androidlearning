@@ -162,8 +162,23 @@ public class TaskContentProvider extends ContentProvider {
         // [Hint] Use selections to delete an item by its row ID
 
         // TODO (3) Notify the resolver of a change and return the number of items deleted
-
-        throw new UnsupportedOperationException("Not yet implemented");
+        SQLiteDatabase db = new TaskDbHelper(this.getContext()).getWritableDatabase();
+        int match = sUriMatcher.match(uri);
+        int cntDeleted = 0;
+        switch (match) {
+            case TASK_WITH_ID:
+                String id = uri.getPathSegments().get(1);
+                String whereClause = "_id=?";
+                String[] whereClauseArgs = new String[]{id};
+                cntDeleted  = db.delete(TABLE_NAME,whereClause, whereClauseArgs );
+                if(cntDeleted != 0) {
+                    getContext().getContentResolver().notifyChange(uri, null);
+                }
+                break;
+            default:
+                throw new UnsupportedOperationException("Not yet implemented");
+        }
+        return cntDeleted;
     }
 
 

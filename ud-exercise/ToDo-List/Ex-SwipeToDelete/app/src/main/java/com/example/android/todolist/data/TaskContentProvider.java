@@ -24,7 +24,9 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.os.CancellationSignal;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 import static com.example.android.todolist.data.TaskContract.TaskEntry.TABLE_NAME;
 
@@ -41,6 +43,13 @@ public class TaskContentProvider extends ContentProvider {
     private static final UriMatcher sUriMatcher = buildUriMatcher();
 
     // Define a static buildUriMatcher method that associates URI's with their int match
+
+    @Nullable
+    @Override
+    public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder, CancellationSignal cancellationSignal) {
+        return super.query(uri, projection, selection, selectionArgs, sortOrder, cancellationSignal);
+    }
+
     /**
      Initialize a new matcher object without any matches,
      then use .addURI(String authority, String path, int match) to add matches

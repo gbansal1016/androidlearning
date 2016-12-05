@@ -35,7 +35,7 @@ import org.junit.runner.RunWith;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.fail;
 
-@RunWith(AndroidJUnit4.class)
+//@RunWith(AndroidJUnit4.class)
 public class TestTaskContentProvider {
 
     /* Context used to access various parts of the system */

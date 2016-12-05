@@ -16,10 +16,17 @@
 
 package com.example.android.todolist;
 
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
+
+import com.example.android.todolist.data.TaskContract;
 
 
 public class AddTaskActivity extends AppCompatActivity {
@@ -50,7 +57,17 @@ public class AddTaskActivity extends AppCompatActivity {
 
         // TODO (8) Display the URI that's returned with a Toast
         // [Hint] Don't forget to call finish() to return to MainActivity after this insert is complete
-
+        String input = ((EditText) findViewById(R.id.editTextTaskDescription)).getText().toString();
+        if( input.length() != 0) {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(TaskContract.TaskEntry.COLUMN_DESCRIPTION,input);
+            contentValues.put(TaskContract.TaskEntry.COLUMN_PRIORITY, mPriority);
+            ContentResolver resolver = getContentResolver();
+            Uri uri =  resolver.insert(TaskContract.TaskEntry.CONTENT_URI,contentValues);
+            if(uri != null)
+                Toast.makeText(getBaseContext(), uri.toString(), Toast.LENGTH_SHORT).show();
+        }
+        finish();
     }
 
 
