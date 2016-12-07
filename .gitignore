@@ -1,1 +1,6 @@
 ./Adv_App_Dev/build
+./Adv_App_Dev/build/generated
+./Adv_App_Dev/build/generated/*
+./Adv_App_Dev/build/intermediates
+./Adv_App_Dev/build/intermediates/*
+*.class
