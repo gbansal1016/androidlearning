@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity{
         });
 
         TextView colorView = (TextView) findViewById(R.id.colors_tv);
-        familyView.setOnClickListener(new View.OnClickListener() {
+        colorView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ColorsActivity.class);
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity{
         });
 
         TextView phraseView = (TextView) findViewById(R.id.phrases_tv);
-        familyView.setOnClickListener(new View.OnClickListener() {
+        phraseView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, PhrasesActivity.class);
