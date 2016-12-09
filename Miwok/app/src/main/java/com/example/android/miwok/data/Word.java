@@ -10,16 +10,19 @@ public class Word {
     private String english;
     private String miwok;
     private Integer imageResourceId;
-
-    public Word(String english, String miwok) {
-        this.english = english;
-        this.miwok = miwok;
-    }
+    private Integer audioResourceId;
 
     public Word(String english, String miwok, Integer resourceId) {
         this.english = english;
         this.miwok = miwok;
+        this.audioResourceId = resourceId;
+    }
+
+    public Word(String english, String miwok, Integer resourceId, Integer audioResourceId) {
+        this.english = english;
+        this.miwok = miwok;
         this.imageResourceId = resourceId;
+        this.audioResourceId = audioResourceId;
     }
 
     public String getEnglish() {
@@ -38,4 +41,7 @@ public class Word {
         return imageResourceId !=null;
     }
 
+    public Integer getAudioResourceId() {
+        return audioResourceId;
+    }
 }
