@@ -2,7 +2,9 @@ package com.example.android.miwok;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -33,6 +35,8 @@ public class PhrasesActivity extends AppCompatActivity {
 
         setFamilyWords();
 
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         ArrayAdapter<Word> itemsAdapter = new WordAdapter(this, R.color.category_phrases, words);
         ListView listView = (ListView) findViewById(R.id.wordsList);
         listView.setAdapter(itemsAdapter);
@@ -56,6 +60,17 @@ public class PhrasesActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         releaseMediaPlayer();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private void setFamilyWords() {

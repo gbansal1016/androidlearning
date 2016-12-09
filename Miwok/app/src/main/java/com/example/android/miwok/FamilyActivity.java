@@ -36,6 +36,8 @@ public class FamilyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         setFamilyWords();
 
         ArrayAdapter<Word> itemsAdapter = new WordAdapter(this, R.color.category_family, words);

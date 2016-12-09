@@ -52,6 +52,9 @@ public class ColorsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         setColors();
 
         ArrayAdapter<Word> itemsAdapter = new WordAdapter(this, R.color.category_colors, words);

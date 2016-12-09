@@ -34,6 +34,8 @@ public class NumbersActivity extends AppCompatActivity {
 
         setNumbers();
 
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         ArrayAdapter<Word> itemsAdapter = new WordAdapter(this, R.color.category_numbers, words);
         ListView listView = (ListView) findViewById(R.id.wordsList);
         listView.setAdapter(itemsAdapter);
