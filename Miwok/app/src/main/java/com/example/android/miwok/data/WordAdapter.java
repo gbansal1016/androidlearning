@@ -1,6 +1,8 @@
 package com.example.android.miwok.data;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,8 +35,9 @@ public class WordAdapter extends ArrayAdapter<Word> {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.miwok_layout,parent,false );
         }
 
-        LinearLayout layout = (LinearLayout) listItemView.findViewById(R.id.linear_layout_tv);
-        layout.setBackgroundColor(m_view_color);
+        View layout = listItemView.findViewById(R.id.linear_layout_tv);
+        int color = ContextCompat.getColor(getContext(), m_view_color);
+        layout.setBackgroundColor(color);
 
         Word word = getItem(position);
 
