@@ -69,7 +69,7 @@ public class PhrasesFragment extends Fragment {
         setFamilyWords();
 
         ArrayAdapter<Word> itemsAdapter = new WordAdapter(getActivity(), R.color.category_phrases, words);
-        ListView listView = (ListView) getActivity().findViewById(R.id.wordsList);
+        ListView listView = (ListView) rootView.findViewById(R.id.wordsList);
         listView.setAdapter(itemsAdapter);
 
         am = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);

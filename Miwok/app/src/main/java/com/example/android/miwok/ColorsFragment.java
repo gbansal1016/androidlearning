@@ -69,7 +69,7 @@ public class ColorsFragment extends Fragment {
 
         ArrayAdapter<Word> itemsAdapter = new WordAdapter(getActivity(), R.color.category_colors, words);
 
-        ListView listView = (ListView) getActivity().findViewById(R.id.wordsList);
+        ListView listView = (ListView) rootView.findViewById(R.id.wordsList);
         listView.setAdapter(itemsAdapter);
 
         am = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
