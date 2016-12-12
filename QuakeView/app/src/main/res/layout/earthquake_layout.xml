@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:id="@+id/quakeList">
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:id="@+id/magnitude"
+    tools:text="7.2"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    />
+
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/location"
+    android:layout_weight="1"
+    tools:text="San Francisco"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    />
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/date"
+    android:layout_weight="1"
+    tools:text="Feb 2, 2016"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    />
+
+</LinearLayout>
