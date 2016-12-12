@@ -15,10 +15,16 @@
  */
 package com.example.android.quakereport;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.android.quakereport.util.QueryUtils;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -48,17 +54,21 @@ public class EarthquakeActivity extends AppCompatActivity {
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
         earthquakeListView.setAdapter(adapter);
+
+        earthquakeListView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener(){
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                        EarthquakeInfo info = earthquakes.get(position);
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(info.getUrl()));
+                        startActivity(intent);
+                    }
+                }
+        );
     }
 
     private void setHistory() {
         // Create a fake list of locations.
-       earthquakes.add(new EarthquakeInfo("San Francisco", String.valueOf(7), (new Date()).toString()));
-        earthquakes.add(new EarthquakeInfo("London", String.valueOf(7), (new Date()).toString()));
-        earthquakes.add(new EarthquakeInfo("Tokyo",  String.valueOf(7), (new Date()).toString()));
-        earthquakes.add(new EarthquakeInfo("Mexico City", String.valueOf(7), (new Date()).toString()));
-        earthquakes.add(new EarthquakeInfo("Moscow", String.valueOf(7), (new Date()).toString()));
-        earthquakes.add(new EarthquakeInfo("Rio de Janeiro", String.valueOf(7), (new Date()).toString()));
-        earthquakes.add(new EarthquakeInfo("Paris", String.valueOf(7), (new Date()).toString()));
-
+        earthquakes = QueryUtils.extractEarthquakeInfos("");
     }
 }
