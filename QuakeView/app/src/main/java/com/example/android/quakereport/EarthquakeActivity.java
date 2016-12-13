@@ -35,7 +35,7 @@ public class EarthquakeActivity extends AppCompatActivity {
 
     public static final String LOG_TAG = EarthquakeActivity.class.getName();
 
-    private static final String USGS_REQUEST_URL="http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&minmag=6&limit=10";
+    private static final String USGS_REQUEST_URL="http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&minmag=3&limit=50";
 
     private ArrayList<EarthquakeInfo> earthquakes = new ArrayList<>();
 
@@ -87,7 +87,6 @@ public class EarthquakeActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(List<EarthquakeInfo> earthquakeInfos) {
-            super.onPostExecute(earthquakeInfos);
 
             adapter.clear();
             if(earthquakeInfos != null && !earthquakeInfos.isEmpty()) {
