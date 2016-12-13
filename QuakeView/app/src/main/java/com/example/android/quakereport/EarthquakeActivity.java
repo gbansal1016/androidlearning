@@ -51,13 +51,7 @@ public class EarthquakeActivity extends AppCompatActivity {
 
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
 
-        setHistory();
-
-        // Create a new {@link ArrayAdapter} of earthquakes
-        /*ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, earthquakes);
-*/
-        adapter = new EarthquakeAdapter(this,null,earthquakes);
+        adapter = new EarthquakeAdapter(this,R.layout.earthquake_layout,earthquakes);
 
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
@@ -102,8 +96,4 @@ public class EarthquakeActivity extends AppCompatActivity {
         }
     }
 
-    private void setHistory() {
-        // Create a fake list of locations.
-        earthquakes = QueryUtils.extractEarthquakeInfos("");
-    }
 }

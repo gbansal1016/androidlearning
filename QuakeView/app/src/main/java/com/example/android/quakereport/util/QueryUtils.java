@@ -1,5 +1,6 @@
 package com.example.android.quakereport.util;
 
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 
@@ -34,6 +35,10 @@ public class QueryUtils {
         ArrayList<EarthquakeInfo> earthquakeInfos = new ArrayList<>();
 
         try {
+            if(TextUtils.isEmpty(serverUrl)) {
+                return null;
+            }
+
             URL url = createURL(serverUrl);
             String json = getServerResponse(url);
 
