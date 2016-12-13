@@ -21,6 +21,7 @@ import android.content.Loader;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -71,11 +72,15 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderManag
 
     @Override
     public Loader<List<EarthquakeInfo>> onCreateLoader(int id, Bundle args) {
+        Log.i(LOG_TAG, "onCreateLoader callback");
+
         return new EarthquakeLoader(this, USGS_REQUEST_URL);
     }
 
     @Override
     public void onLoadFinished(Loader<List<EarthquakeInfo>> loader, List<EarthquakeInfo> data) {
+
+        Log.i(LOG_TAG, "onLoadFinished callback");
         adapter.clear();
         if(data != null && !data.isEmpty()) {
             adapter.addAll(data);
@@ -84,6 +89,7 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderManag
 
     @Override
     public void onLoaderReset(Loader<List<EarthquakeInfo>> loader) {
+        Log.i(LOG_TAG, "onLoadReset callback");
         adapter.clear();
     }
 
