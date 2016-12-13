@@ -25,6 +25,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +42,10 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderManag
 
     private EarthquakeAdapter adapter;
 
+    private TextView emptyView;
+
+    private ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -49,12 +55,16 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderManag
         setContentView(R.layout.earthquake_activity);
 
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
+        emptyView = (TextView)findViewById(R.id.empty_view);
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.VISIBLE);
 
         adapter = new EarthquakeAdapter(this,R.layout.earthquake_layout,earthquakes);
 
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
         earthquakeListView.setAdapter(adapter);
+        earthquakeListView.setEmptyView(emptyView);
 
         earthquakeListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener(){
@@ -80,10 +90,13 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderManag
     @Override
     public void onLoadFinished(Loader<List<EarthquakeInfo>> loader, List<EarthquakeInfo> data) {
 
-        Log.i(LOG_TAG, "onLoadFinished callback");
+        progressBar.setVisibility(View.GONE);
+
         adapter.clear();
         if(data != null && !data.isEmpty()) {
             adapter.addAll(data);
+        } else{
+            emptyView.setText(R.string.no_earthquakes);
         }
     }
 
