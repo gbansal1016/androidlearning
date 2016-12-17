@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //MarkerOption
+        //PolyLineOption
 
         Button mapButton = (Button) findViewById(R.id.btn_map);
         Button satButton = (Button) findViewById(R.id.btn_satellite);
