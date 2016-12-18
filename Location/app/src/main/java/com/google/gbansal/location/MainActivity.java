@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity
 
     private LocationRequest mLocationRequest;
 
-    private final int PERMISSION_REQUEST_LOCATION_ACCESS=1;
+    private final int PERMISSION_REQUEST_LOCATION_ACCESS = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,38 +66,54 @@ public class MainActivity extends AppCompatActivity
     public void onConnected(Bundle bundle) {
         Log.i(TAG, "Google API Client connected");
 
-        mLocationRequest = new LocationRequest();
-        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        mLocationRequest.setInterval(2000);
-
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_LOCATION_ACCESS);
+        } else {
+            Log.i(TAG, "Access to location already available");
+            updateLastLocation();
+            if (mLastLocation != null) {
+                locationView.setText("Latitude:" + mLastLocation.getLatitude() + "Longitude:" + mLastLocation.getLongitude());
+            }
+            createLocationRequest();
         }
+    }
 
+    private void createLocationRequest() {
+        mLocationRequest = LocationRequest.create();
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setInterval(2000);
+        LocationServices.FusedLocationApi.requestLocationUpdates(gClient, mLocationRequest, this);
+    }
 
-   /*     Log.e(TAG, "Issue with Permission");
-        int retry =0;
-        while((mLastLocation == null) && retry<=100) {
+    private void updateLastLocation() {
+
+        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(gClient);
+        int retry = 0;
+        while ((mLastLocation == null) && retry <= 10) {
             retry++;
             try {
                 Thread.sleep(4000);
             } catch (InterruptedException e) {
             }
             mLastLocation = LocationServices.FusedLocationApi.getLastLocation(gClient);
-            if (mLastLocation != null) {
-                locationView.setText("Latitude:" + mLastLocation.getLatitude() + "Longitude:" + mLastLocation.getLongitude());
-            }
-        }*/
+        }
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
         switch (requestCode) {
             case PERMISSION_REQUEST_LOCATION_ACCESS:
                 //Permission granted
-                if(grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
-                Log.i(TAG,"Permission granted for locations");
-                LocationServices.FusedLocationApi.requestLocationUpdates(gClient, mLocationRequest, this);
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Log.i(TAG, "Permission granted for locations");
+
+                    updateLastLocation();
+                    if (mLastLocation != null) {
+                        locationView.setText("Latitude:" + mLastLocation.getLatitude() + "Longitude:" + mLastLocation.getLongitude());
+                    }
+                    createLocationRequest();
+                }
                 break;
             default:
                 Log.e(TAG, "Permission to access location is denied");
@@ -113,6 +129,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onLocationChanged(Location location) {
         Log.i(TAG, "Location Changed");
-        locationView.setText("Latitude:" + location.getLatitude()+ "Longitude:" + location.getLongitude());
+        locationView.setText("Latitude:" + location.getLatitude() + "Longitude:" + location.getLongitude());
     }
 }
