@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\gaurav\androidlearning\Reader\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.0.0_a3f4765cf2fc06b14a5e3ce8d2d93ccbbef44c66\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tanvi\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.0.0_5bff3dbbd7de15d9687a2a354751710bf1dec5b3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gaurav\androidlearning\Reader\build\intermediates\exploded-aar\com.android.support\support-v13\22.0.0\jars\libs\internal_impl-22.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="def3eff2b7b4774d96ae15b07b3fc0111edbfe24">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.0.0_70adfce14e974adda5963e9f0eaab91cec052a6e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gaurav\androidlearning\Reader\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="11842de6a309c447b3a3d60d73ad637a87c58994">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-22.0.0_1d8b79edc1912605d48164ca409624d61a52d32b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gaurav\androidlearning\Reader\build\intermediates\exploded-aar\com.android.support\support-v13\22.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="7f9cca1caa023a880b00c382bcc5c90245ae4895">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v13-22.0.0_94283adfcc60e9264eeaf6c193cfe37a3c820e0e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gaurav\androidlearning\Reader\build\intermediates\exploded-aar\com.android.support\palette-v7\22.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="285506e1cf9d5a66878e2aab3884b3427f8734e9">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-22.0.0_74f49c4d73f41f50ab83f9b33ba29ede7876915b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tanvi\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.6.0_f8787c321ca63a4479476291ec764b702e29614d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gaurav\androidlearning\Reader\libs\volley.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c68094cbd011a3f9dccbfe16e77a2cf43622e277">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\2\volley_9782c5941d72fd5f402c3288d1c7cd933260bac6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gaurav\androidlearning\Reader\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\libs\internal_impl-22.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.0.0_ac3bd28ab989474491fe8374ac924a673c3e050e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gaurav\androidlearning\Reader\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="afc008a2633c1e9fa13dcf69e555b4a5e16fd882">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_8b845cc87fc4be0bbcb8b8f0897920799c89e8ee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gaurav\androidlearning\Reader\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.0.0_5eaa54e9333250777f0aa99d0242c3db68cd7bbc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tanvi\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.1.2\7052283359001bb108753cb0583a887d3bf94c82\okhttp-3.1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="7052283359001bb108753cb0583a887d3bf94c82">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.1.2_abfa9fe9c628155e4fda4472c3511c26accd06ce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gaurav\androidlearning\Reader\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="dda29ec998c347423796d626269d97217db170aa">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_35ef534bee9cc53dbfab15ad90f4722a51bb5e22\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gaurav\androidlearning\Reader\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c6d79137693d494dee16372d3921f919eb724ced">
+        <dex dex="C:\gaurav\androidlearning\Reader\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-22.0.0_a3f040dc52b6ec18e65b28f54b8eae4d2698ae69\classes.dex" />
+    </item>
+
+</items>

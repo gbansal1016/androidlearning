@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="25"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.2"
+    timestamp="11499901341874"
+    token="8174961001545291288"
+    verifier="COLD_SWAP_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="0" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="0" />
+    <task
+        name="verifier"
+        duration="0" />
+
+    <artifact
+        location="C:\gaurav\androidlearning\Reader\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
+
+    <build
+        timestamp="11297442884649"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\gaurav\androidlearning\Reader\build\outputs\apk\Reader-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="11499901341874"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\gaurav\androidlearning\Reader\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+    </build>
+
+</instant-run>

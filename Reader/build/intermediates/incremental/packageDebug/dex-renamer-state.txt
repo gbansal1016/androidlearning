@@ -1,0 +1,7 @@
+#Fri Jan 13 01:16:52 EST 2017
+base.0=C\:\\gaurav\\androidlearning\\Reader\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_8b845cc87fc4be0bbcb8b8f0897920799c89e8ee
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\gaurav\\androidlearning\\Reader\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_35ef534bee9cc53dbfab15ad90f4722a51bb5e22\\classes.dex
+base.1=C\:\\gaurav\\androidlearning\\Reader\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_35ef534bee9cc53dbfab15ad90f4722a51bb5e22
+file.0=C\:\\gaurav\\androidlearning\\Reader\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_8b845cc87fc4be0bbcb8b8f0897920799c89e8ee\\classes.dex
