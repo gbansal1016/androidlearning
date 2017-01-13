@@ -85,5 +85,4 @@
             android:text="@string/default_charge_notification_count" />
 
     </RelativeLayout>
-
 </LinearLayout>

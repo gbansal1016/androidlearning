@@ -15,8 +15,13 @@
  */
 package com.example.android.background;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.os.BatteryManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -28,7 +33,6 @@ import android.widget.Toast;
 import com.example.android.background.sync.ReminderTasks;
 import com.example.android.background.sync.ReminderUtilities;
 import com.example.android.background.sync.WaterReminderIntentService;
-import com.example.android.background.utilities.NotificationUtils;
 import com.example.android.background.utilities.PreferenceUtilities;
 
 public class MainActivity extends AppCompatActivity implements
@@ -39,6 +43,10 @@ public class MainActivity extends AppCompatActivity implements
     private ImageView mChargingImageView;
 
     private Toast mToast;
+
+    private BroadcastReceiver mChargingBroadcastReceiver;
+
+    private IntentFilter chargingIntentFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,12 +61,55 @@ public class MainActivity extends AppCompatActivity implements
         /** Set the original values in the UI **/
         updateWaterCount();
         updateChargingReminderCount();
-
-        // TODO (23) Schedule the charging reminder
         ReminderUtilities.scheduleChargingReminder(this);
+
         /** Setup the shared preference listener **/
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         prefs.registerOnSharedPreferenceChangeListener(this);
+
+        // TODO (5) Create and instantiate a new instance variable for your ChargingBroadcastReceiver
+        // and an IntentFilter
+        // TODO (6) Call the addAction method on your intent filter and add Intent.ACTION_POWER_CONNECTED
+        // and Intent.ACTION_POWER_DISCONNECTED. This sets up an intent filter which will trigger
+        // when the charging state changes.
+
+        mChargingBroadcastReceiver = new ChargingBroadcastReceiver();
+        chargingIntentFilter = new IntentFilter();
+        chargingIntentFilter.addAction(Intent.ACTION_POWER_CONNECTED);
+        chargingIntentFilter.addAction(Intent.ACTION_POWER_DISCONNECTED);
+        boolean isCharging = false;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            BatteryManager batteryManager = (BatteryManager) getSystemService(BATTERY_SERVICE);
+            isCharging = batteryManager.isCharging();
+            showCharging(isCharging);
+        } else {
+            IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+            Intent batteryStatus = registerReceiver(null, ifilter);
+
+            int status =batteryStatus.getIntExtra(BatteryManager.EXTRA_STATUS,-1);
+            isCharging = (status == BatteryManager.BATTERY_STATUS_CHARGING || status == BatteryManager.BATTERY_STATUS_FULL);
+            showCharging(isCharging);
+        }
+
+    }
+
+    // TODO (7) Override onResume and setup your broadcast receiver. Do this by calling
+    // registerReceiver with the ChargingBroadcastReceiver and IntentFilter.
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver(mChargingBroadcastReceiver, chargingIntentFilter);
+    }
+
+
+    // TODO (8) Override onPause and unregister your receiver using the unregisterReceiver method
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(mChargingBroadcastReceiver);
     }
 
     /**
@@ -66,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements
      */
     private void updateWaterCount() {
         int waterCount = PreferenceUtilities.getWaterCount(this);
-        mWaterCountDisplay.setText(waterCount+"");
+        mWaterCountDisplay.setText(waterCount + "");
     }
 
     /**
@@ -78,6 +129,19 @@ public class MainActivity extends AppCompatActivity implements
                 R.plurals.charge_notification_count, chargingReminders, chargingReminders);
         mChargingCountDisplay.setText(formattedChargingReminders);
 
+    }
+
+    // TODO (1) Create a new method called showCharging which takes a boolean. This method should
+    // either change the image of mChargingImageView to ic_power_pink_80px if the boolean is true
+    // or R.drawable.ic_power_grey_80px it it's not. This method will eventually update the UI
+    // when our broadcast receiver is triggered when the charging state changes.
+
+    public void showCharging(boolean isCharging) {
+        if (isCharging) {
+            mChargingImageView.setImageResource(R.drawable.ic_power_pink_80px);
+        } else {
+            mChargingImageView.setImageResource(R.drawable.ic_power_grey_80px);
+        }
     }
 
     /**
@@ -92,7 +156,6 @@ public class MainActivity extends AppCompatActivity implements
         incrementWaterCountIntent.setAction(ReminderTasks.ACTION_INCREMENT_WATER_COUNT);
         startService(incrementWaterCountIntent);
     }
-
 
     @Override
     protected void onDestroy() {
@@ -114,4 +177,25 @@ public class MainActivity extends AppCompatActivity implements
             updateChargingReminderCount();
         }
     }
+
+
+    // TODO (2) Create an inner class called ChargingBroadcastReceiver that extends BroadcastReceiver
+    // TODO (3) Override onReceive to get the action from the intent and see if it matches the
+    // Intent.ACTION_POWER_CONNECTED. If it matches, it's charging. If it doesn't match, it's not
+    // charging.
+    // TODO (4) Update the UI using the showCharging method you wrote
+
+    public class ChargingBroadcastReceiver extends BroadcastReceiver{
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if(action.equals(Intent.ACTION_POWER_CONNECTED)) {
+                showCharging(true);
+            } else {
+                showCharging(false);
+            }
+        }
+    }
+
 }

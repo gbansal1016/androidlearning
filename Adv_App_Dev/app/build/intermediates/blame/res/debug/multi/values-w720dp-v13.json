@@ -11,13 +11,13 @@
                     "endOffset": 127
                 },
                 "from": {
-                    "file": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.2\\res\\values-w720dp\\values.xml",
+                    "file": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-w720dp-v13\\values.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 56,
+                        "startOffset": 293,
                         "endColumn": 76,
-                        "endOffset": 128
+                        "endOffset": 365
                     }
                 }
             }

@@ -11,13 +11,13 @@
                     "endOffset": 114
                 },
                 "from": {
-                    "file": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.2\\res\\values-xlarge-land\\values.xml",
+                    "file": "C:\\gaurav\\android\\androidlearning\\Adv_App_Dev\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-xlarge-land-v4\\values.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 56,
+                        "startOffset": 299,
                         "endColumn": 63,
-                        "endOffset": 115
+                        "endOffset": 358
                     }
                 }
             }

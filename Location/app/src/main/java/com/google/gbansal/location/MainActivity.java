@@ -2,6 +2,7 @@ package com.google.gbansal.location;
 
 import android.*;
 import android.Manifest;
+import android.app.PendingIntent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.nfc.Tag;
@@ -15,12 +16,16 @@ import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.ActivityRecognitionApi;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 
 public class MainActivity extends AppCompatActivity
-        implements GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks, LocationListener {
+        implements GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks,
+        LocationListener, ActivityRecognitionApi {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private GoogleApiClient gClient;
@@ -130,5 +135,17 @@ public class MainActivity extends AppCompatActivity
     public void onLocationChanged(Location location) {
         Log.i(TAG, "Location Changed");
         locationView.setText("Latitude:" + location.getLatitude() + "Longitude:" + location.getLongitude());
+    }
+
+    @Override
+    public PendingResult<Status> requestActivityUpdates(GoogleApiClient googleApiClient, long l, PendingIntent pendingIntent) {
+
+
+        return null;
+    }
+
+    @Override
+    public PendingResult<Status> removeActivityUpdates(GoogleApiClient googleApiClient, PendingIntent pendingIntent) {
+        return null;
     }
 }

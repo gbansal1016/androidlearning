@@ -99,7 +99,7 @@ public class NotificationUtils {
         return ignoreReminderAction;
     }
 
-    public static Action drinkWaterAction(Context context) {
+    private static Action drinkWaterAction(Context context) {
         Intent incrementWaterCountIntent = new Intent(context, WaterReminderIntentService.class);
         incrementWaterCountIntent.setAction(ReminderTasks.ACTION_INCREMENT_WATER_COUNT);
         PendingIntent incrementWaterPendingIntent = PendingIntent.getService(
@@ -113,7 +113,7 @@ public class NotificationUtils {
         return drinkWaterAction;
     }
 
-    public static PendingIntent contentIntent(Context context) {
+    private static PendingIntent contentIntent(Context context) {
         Intent startActivityIntent = new Intent(context, MainActivity.class);
         return PendingIntent.getActivity(
                 context,
@@ -122,7 +122,7 @@ public class NotificationUtils {
                 PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
-    public static Bitmap largeIcon(Context context) {
+    private static Bitmap largeIcon(Context context) {
         Resources res = context.getResources();
         Bitmap largeIcon = BitmapFactory.decodeResource(res, R.drawable.ic_local_drink_black_24px);
         return largeIcon;
